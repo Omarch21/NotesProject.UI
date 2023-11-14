@@ -1,0 +1,24 @@
+main{
+    background-color:#f0f0f0f0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#login{
+    width:400px;
+    height:600px;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    box-shadow: 0 0 5px rgb(77, 76, 76);
+    border-radius:10px;
+}
+#username-form{
+background-color:#f0f0f0f0;
+width:80%;
+border-radius:5px;
+
+}
