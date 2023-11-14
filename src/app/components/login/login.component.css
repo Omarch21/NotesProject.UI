@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+*{
+    font-family: 'Fira Sans', sans-serif;}
 main{
-    background-color:#f0f0f0f0;
+    background-image:url("../../../assets/pic.jpg");
+    background-size: cover;
     width:100vw;
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
 }
+h1{
+   color:#FF6600;
+}
 #login{
-    width:400px;
+    width:450px;
     height:600px;
     background-color: white;
     display:flex;
@@ -15,14 +22,58 @@ main{
     flex-direction:column;
     box-shadow: 0 0 5px rgb(77, 76, 76);
     border-radius:10px;
+    padding:20px;
 }
-#username-form{
-    height:30%;
+#username-form, #password-form{
+    height:20%;
     width:100%;
     text-align:center;
+    flex-direction:column;
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color:#f0f0f0f0;
+
+}
+#username-form p,#password-form p{
+    width:80%;
+    text-align:start;
+
+}
+#log-wrapper{
+    width:100%;
+    height:100%;
+}
+input{
+    border:none;
+    height:40px;
+    font-size:16px;
+    width:80%;
+    border-radius:5px;
+    border:2px solid grey;
+    transition:0.2s all;
+}
+input:focus{
+   outline-width:0;
+   border:2px solid#FF6600;
+}
+button{
+    margin-top:30px;
+    border:none;
+    background-color:#FF6600;
+    width:80%;
+    height:35px;
+    border-radius:5px;
+    box-shadow:0 0 4px rgb(117, 115, 115);
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+}
+button:hover{
+   background-color: #d45703
+}
+hr{
+    margin-top:30px;
+    width:100%;
+    color:black;
 
 }
