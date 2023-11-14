@@ -17,8 +17,12 @@ main{
     border-radius:10px;
 }
 #username-form{
-background-color:#f0f0f0f0;
-width:80%;
-border-radius:5px;
+    height:30%;
+    width:100%;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f0f0f0f0;
 
 }
