@@ -4,13 +4,13 @@
         <h1>Login</h1>
         <div id="username-form"> 
             <p>Username</p>
-            <input type="text">
+            <input type="text" class="form-control" [(ngModel)] = "user.email">
         </div>
         <div id="password-form">
             <p>Password</p>
-            <input type="password">
+            <input type="password" class="form-control" [(ngModel)] = "user.password">
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" (click)="login(user)">Submit</button>
         <hr>
         <p>OR</p>
 

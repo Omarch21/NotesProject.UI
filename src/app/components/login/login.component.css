@@ -2,8 +2,10 @@
 *{
     font-family: 'Fira Sans', sans-serif;}
 main{
-    background-image:url("../../../assets/pic.jpg");
-    background-size: cover;
+    background-image:url("../../../assets/new.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
     width:100vw;
     height:100vh;
     display:flex;
@@ -50,7 +52,7 @@ input{
     width:80%;
     border-radius:5px;
     border:2px solid grey;
-    transition:0.2s all;
+    transition:0.2s ease-in;
 }
 input:focus{
    outline-width:0;

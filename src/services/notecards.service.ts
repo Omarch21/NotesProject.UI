@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class NotecardsService {
-private url = "Values"
+private url = "Notecard"
   constructor(private http:HttpClient) { }
   public getSet(): Observable<NotecardSet[]>{
     return this.http.get<NotecardSet[]>(`${environment.apiUrl}/${this.url}`);
