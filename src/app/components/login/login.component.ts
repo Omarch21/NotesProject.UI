@@ -13,10 +13,13 @@ user = new User();
 
 login(user: User){
   console.log(user);
-  this.authService.login(user).subscribe((token: string) =>{
-localStorage.setItem('authToken',token);
-console.log('good');
-this.router.navigate(['/']);
+  this.authService.login(user).subscribe((token: any) =>{
+
+console.log(token);
+  }, (error) =>{
+    console.error('login error:',error)
   });
+  
+
 }
 }
