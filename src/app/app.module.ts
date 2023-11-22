@@ -11,23 +11,33 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LandingComponent } from './components/landing/landing.component';
 
 import { AuthService } from 'src/services/auth.service';
+import { Interceptor } from 'src/services/interceptor';
+import { RegisterComponent } from './components/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    LandingComponent
+    LandingComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    HotToastModule.forRoot()
   ],
-  providers: [
-   
+  providers: [/*{
+    provide: HTTP_INTERCEPTORS,
+    useClass: Interceptor,
+    multi: true
+   }*/
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+*{
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    height:100vh;
+    width:100vw;
+    background-image: url("../../../assets/register-img.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#wrapper h2{
+    color:#FF6600;
+}
+#wrapper{
+    height:60%;
+    width:40%;
+    background-color:rgb(247, 247, 247);
+
+    border-radius:10px;
+    box-shadow: 0 0 5px rgb(51, 51, 51);
+    display:flex;
+    align-items: center;
+    padding:20px 0;
+    flex-direction:column;
+}
+input{
+    border:none;
+    height:40px;
+    font-size:16px;
+    width:50%;
+    border-radius:5px;
+    border:2px solid grey;
+    transition:0.2s ease-in;
+}
+.register-form{
+    width:100%;
+    height:80%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align:start;
+}
+.register-form p{
+    font-size: 18px;
+    font-weight:bold;
+    color:#FF6600;
+    margin-top:20px;
+    width:49%;
+    text-align:start;
+}

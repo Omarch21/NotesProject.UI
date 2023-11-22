@@ -14,7 +14,6 @@ export class DashboardComponent implements OnInit{
   private url = "authentication"
 constructor(private authService: AuthService,private http: HttpClient,private _ngZone: NgZone,private router: Router){}
 ngOnInit(){
- 
   }
  
   testEndpoint(){
@@ -32,15 +31,11 @@ ngOnInit(){
       console.log(text);
     })
   }
-  public logout(){
   
-      this.authService.logout().subscribe(
-        response=>{
-          console.log('asdasd',response);
-        },
-        error=>{
-          console.error('logout',error);
-        }
-      ) 
+  public logout(){
+    console.log(localStorage.getItem("token"));
+    this.authService.logout()
+    this.router.navigate(['/'])
+  console.log(localStorage.getItem("token"));
   }
 }

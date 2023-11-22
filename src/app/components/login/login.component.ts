@@ -14,8 +14,9 @@ user = new User();
 login(user: User){
   console.log(user);
   this.authService.login(user).subscribe((token: any) =>{
-
-console.log(token);
+    
+localStorage.setItem('token',token);
+localStorage.setItem('username',user.email)
   }, (error) =>{
     console.error('login error:',error)
   });

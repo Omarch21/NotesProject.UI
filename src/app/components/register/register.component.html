@@ -1,0 +1,25 @@
+<body>
+  
+    <div id="wrapper">
+        <h2>Register</h2>
+       
+        <form class="register-form" [formGroup]="register" (ngSubmit)="submitRegister()">
+          
+            <p>First Name</p>
+            <input placeholder="Enter First Name" formControlName="firstName">
+            <p>Last Name</p>
+            <input placeholder="Enter Last Name" formControlName = "lastName">
+            <p>Email</p>
+            <input placeholder="Enter Email" formControlName = "email">
+            <p>Password</p>
+            <input placeholder="Enter Password" formControlName = "password">
+            <p>Confirm Password</p>
+            <input placeholder="Confirm Password" formControlName = "confirmPassword">
+            <span *ngIf="passwordError">Passwords dont match</span>
+           <button type="submit" [disabled]="register.invalid">Register</button>
+        </form>
+
+    
+    </div>
+
+</body>

@@ -9,19 +9,19 @@ import {map,Observable} from 'rxjs'
 export class AuthGuard implements CanActivate{
     check: boolean = false;
     constructor(private http: HttpClient, private router: Router, private authService:AuthService){}
-    canActivate():Observable<boolean>{
-return this.authService.isUserLoggedIn().pipe(
-    map((result:boolean)=>{
-    if(result){
+    canActivate():boolean{
+        var t = this.authService.isLoggedIn()
+  
+    if(t){
     return true;
-}else{
-    this.router.navigate(['login']);
+    }else{
+        this.router.navigate(['login']);
     return false;
 }
-})
-)
+}
+}
+
 
   
 
-    }
-}
+    
