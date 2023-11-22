@@ -1,4 +1,5 @@
 import { Component,Renderer2, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup,FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { HotToastService } from '@ngneat/hot-toast';
@@ -19,7 +20,7 @@ register = new FormGroup({
   confirmPassword: new FormControl('',Validators.required)
 })
 passwordError: boolean = false;
-constructor(private toastService: HotToastService,private authService: AuthService){
+constructor(private toastService: HotToastService,private authService: AuthService,private router: Router){
 
   
 }
@@ -40,7 +41,8 @@ submitRegister(){
       this.user.email = this.register.get('email')?.value!;
       console.log(this.user);
       this.authService.register(this.user).subscribe(a=>{
-        this.toastService.success(a.message);
+        this.toastService.success(a.message); 
+        this.router.navigate(['/login']);
       },
       error=>{
         this.toastService.error(error.error);
